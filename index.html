@@ -326,7 +326,7 @@
                     </div>
                     <p class="acquisition-image-caption">Complete walkthrough of our marketing communication system</p>
                 </div>
-                <div class="acquisition-image-item">
+                <div class="acquisition-image-item" style="display:none;">
                     <div class="acquisition-image-placeholder">
                         <img src="recording ad.jpeg" alt="Custom created ads">
                     </div>
@@ -578,6 +578,7 @@
                 this.classList.add('selected');
 
                 checkFormValid();
+                debouncedPartial();
             });
         });
 
@@ -597,7 +598,37 @@
             if (e.key === 'Escape') closeAllDropdowns();
         });
 
+        // --- Partial form data capture (Sheet 2 via Apps Script) ---
+        var PARTIAL_URL = 'https://script.google.com/macros/s/AKfycbzoqteR0v3ZXjG-h0GT72etlPnJKPwxfaGAhmX2BrERO9XRq1hhMZ4rMlrtiZzYaDu6hg/exec';
+        var sessionId = 'sid_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+        var formSubmitted = false;
+        var partialTimer = null;
+
+        function sendPartialData() {
+            if (formSubmitted) return;
+            var fn = firmInput.value.trim();
+            var em = emailInput.value.trim();
+            var rev = challengeInput.value;
+            if (!fn && !em && !rev) return;
+
+            fetch(PARTIAL_URL + '?sessionId=' + encodeURIComponent(sessionId) +
+                '&firmName=' + encodeURIComponent(fn) +
+                '&email=' + encodeURIComponent(em) +
+                '&revenue=' + encodeURIComponent(rev), {
+                mode: 'no-cors'
+            }).catch(function() {});
+        }
+
+        function debouncedPartial() {
+            clearTimeout(partialTimer);
+            partialTimer = setTimeout(sendPartialData, 1000);
+        }
+
+        firmInput.addEventListener('blur', debouncedPartial);
+        emailInput.addEventListener('blur', debouncedPartial);
+
         form.addEventListener('submit', function(e) {
+            formSubmitted = true;
             e.preventDefault();
             if (btn.disabled) return;
 
