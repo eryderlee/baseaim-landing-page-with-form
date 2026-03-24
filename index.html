@@ -603,6 +603,20 @@
 
             var firmName = firmInput.value.trim();
             var email = emailInput.value.trim();
+            var revenue = challengeInput.value;
+
+            // Send lead data to n8n webhook
+            fetch('https://n8n.ryderagency.com/webhook/74d6152a-1264-4712-9836-7100c7495b62', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firmName: firmName,
+                    email: email,
+                    revenue: revenue
+                })
+            }).catch(function() {});
+
+            // Open booking page (don't wait for webhook)
             var bookUrl = 'book.html?name=' +
                          encodeURIComponent(firmName) +
                          '&email=' + encodeURIComponent(email);
@@ -613,7 +627,7 @@
                 fbq('track', 'Lead', {
                     content_name: 'Strategy Call Form',
                     firm_name: firmName,
-                    challenge: challengeInput.value
+                    challenge: revenue
                 });
             }
         });
