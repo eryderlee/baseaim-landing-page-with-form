@@ -1777,6 +1777,71 @@ p {
 
 }
 
+/* ============================
+   MODAL TEST - DELETE TO REVERT
+   ============================ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-overlay.modal-open {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    color: #374151;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: #f3f4f6;
+}
+
+.modal-container .lead-form-wrapper {
+    width: 100%;
+}
+
+.hero-cta-placeholder {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* ============================
+   END MODAL TEST
+   ============================ */
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 968px) {
     .hero-content {

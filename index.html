@@ -134,6 +134,10 @@
 
                 </div>
 
+                <!-- MODAL TEST START -->
+                <div class="modal-overlay" id="modal-overlay">
+                  <div class="modal-container">
+                    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
                 <div class="lead-form-wrapper" id="lead-form">
                     <div class="lead-form-card">
                         <h3 class="lead-form-heading">Get Your Free Strategy Call</h3>
@@ -172,7 +176,14 @@
                         </form>
                     </div>
                 </div>
+                  </div>
+                </div>
+                <!-- MODAL TEST END -->
 
+                <!-- MODAL TEST: Hero CTA -->
+                <div class="hero-cta-placeholder" id="hero-cta">
+                    <button class="btn btn-primary" onclick="openModal()">Book My Free Strategy Call</button>
+                </div>
 
                 <div class="scroll-arrow" onclick="document.getElementById('frustration').scrollIntoView({behavior:'smooth'})">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -519,13 +530,30 @@
     </div>
 
     <script>
-    // Scroll all CTAs to the lead form
-    function scrollToBooking() {
-        var form = document.getElementById('lead-form');
-        if (form) {
-            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+    // --- MODAL TEST START ---
+    function openModal() {
+        document.getElementById('modal-overlay').classList.add('modal-open');
+        document.body.style.overflow = 'hidden';
     }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').classList.remove('modal-open');
+        document.body.style.overflow = '';
+    }
+
+    // Redirect all existing CTAs to open the modal
+    function scrollToBooking() {
+        openModal();
+    }
+
+    (function() {
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        // Prevent clicks inside modal container from bubbling to overlay
+        document.querySelector('.modal-container').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    })();
+    // --- MODAL TEST END ---
 
     document.addEventListener('DOMContentLoaded', function() {
         // --- Lead form validation & submission ---
