@@ -134,52 +134,6 @@
 
                 </div>
 
-                <!-- MODAL TEST START -->
-                <div class="modal-overlay" id="modal-overlay">
-                  <div class="modal-container">
-                    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-                <div class="lead-form-wrapper" id="lead-form">
-                    <div class="lead-form-card">
-                        <h3 class="lead-form-heading">Get Your Free Strategy Call</h3>
-                        <form id="lead-form-el" autocomplete="on" novalidate>
-                            <div class="form-group">
-                                <label for="firm-name">Firm Name</label>
-                                <input type="text" id="firm-name" name="firm-name" placeholder="e.g. Smith & Co Accounting" required autocomplete="organization">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="you@yourfirm.com.au" required autocomplete="email">
-                            </div>
-                            <div class="form-group">
-                                <label>Annual Firm Revenue</label>
-                                <input type="hidden" id="challenge" name="revenue" value="">
-                                <div class="custom-select" id="custom-select">
-                                    <button type="button" class="custom-select-trigger" id="select-trigger" aria-haspopup="listbox" aria-expanded="false">
-                                        <span class="custom-select-value" id="select-value">Select your firm's annual revenue...</span>
-                                        <svg class="custom-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                                    </button>
-                                    <ul class="custom-select-options" id="select-options" role="listbox">
-                                        <li data-value="under-250k" role="option">Under $250k</li>
-                                        <li data-value="250k-1m" role="option">$250k – $1M</li>
-                                        <li data-value="1m-3m" role="option">$1M – $3M</li>
-                                        <li data-value="3m-plus" role="option">$3M+</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="form-submit-section">
-                                <p class="final-step-label">One Final Step</p>
-                                <button type="submit" class="btn btn-primary lead-form-btn" id="schedule-btn" disabled>
-                                    <span>Schedule My Call</span>
-                                    <span class="btn-subtext">✓ Refund Guaranteed</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                  </div>
-                </div>
-                <!-- MODAL TEST END -->
-
                 <!-- MODAL TEST: Hero CTA -->
                 <div class="hero-cta-placeholder" id="hero-cta">
                     <button class="btn btn-primary" onclick="openModal()">Book My Free Strategy Call</button>
@@ -711,5 +665,52 @@
         });
     });
     </script>
+
+    <!-- MODAL TEST START -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal-container">
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+        <div class="lead-form-wrapper" id="lead-form">
+            <div class="lead-form-card">
+                <h3 class="lead-form-heading">Get Your Free Strategy Call</h3>
+                <form id="lead-form-el" autocomplete="on" novalidate>
+                    <div class="form-group">
+                        <label for="firm-name">Firm Name</label>
+                        <input type="text" id="firm-name" name="firm-name" placeholder="e.g. Smith & Co Accounting" required autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@yourfirm.com.au" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Annual Firm Revenue</label>
+                        <input type="hidden" id="challenge" name="revenue" value="">
+                        <div class="custom-select" id="custom-select">
+                            <button type="button" class="custom-select-trigger" id="select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                                <span class="custom-select-value" id="select-value">Select your firm's annual revenue...</span>
+                                <svg class="custom-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <ul class="custom-select-options" id="select-options" role="listbox">
+                                <li data-value="under-250k" role="option">Under $250k</li>
+                                <li data-value="250k-1m" role="option">$250k – $1M</li>
+                                <li data-value="1m-3m" role="option">$1M – $3M</li>
+                                <li data-value="3m-plus" role="option">$3M+</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-submit-section">
+                        <p class="final-step-label">One Final Step</p>
+                        <button type="submit" class="btn btn-primary lead-form-btn" id="schedule-btn" disabled>
+                            <span>Schedule My Call</span>
+                            <span class="btn-subtext">✓ Refund Guaranteed</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL TEST END -->
+
 </body>
 </html>
