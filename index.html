@@ -500,13 +500,6 @@
         openModal();
     }
 
-    (function() {
-        document.getElementById('modal-close').addEventListener('click', closeModal);
-        // Prevent clicks inside modal container from bubbling to overlay
-        document.querySelector('.modal-container').addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-    })();
     // --- MODAL TEST END ---
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -629,11 +622,25 @@
                 })
             }).catch(function() {});
 
-            // Open booking page (don't wait for webhook)
-            var bookUrl = 'book.html?name=' +
-                         encodeURIComponent(firmName) +
-                         '&email=' + encodeURIComponent(email);
-            window.open(bookUrl, '_blank');
+            // Transform modal to Cal.com booking
+            var calBase = 'https://cal.com/team/baseaim/khan';
+            var calParams = [];
+            if (firmName) calParams.push('name=' + encodeURIComponent(firmName));
+            if (email) calParams.push('email=' + encodeURIComponent(email));
+            var calUrl = calBase + (calParams.length ? '?' + calParams.join('&') : '');
+
+            var container = document.querySelector('.modal-container');
+            container.classList.add('modal-booking');
+            document.getElementById('modal-overlay').classList.add('modal-booking-open');
+            container.innerHTML =
+                '<div class="modal-cal-header">' +
+                    '<img src="BASEAIM BLACK.png" alt="Baseaim" class="modal-cal-logo">' +
+                    '<h2 class="modal-cal-title">Book Your <span>Strategy Call</span></h2>' +
+                    '<p class="modal-cal-sub">Choose a time that works for you — we\'ll handle the rest.</p>' +
+                '</div>' +
+                '<div class="modal-cal-embed">' +
+                    '<iframe src="' + calUrl + '" class="modal-cal-iframe" title="Book a strategy call"></iframe>' +
+                '</div>';
 
             // Track form submission with Meta Pixel
             if (typeof fbq !== 'undefined') {
@@ -669,7 +676,6 @@
     <!-- MODAL TEST START -->
     <div class="modal-overlay" id="modal-overlay">
       <div class="modal-container">
-        <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
         <div class="lead-form-wrapper" id="lead-form">
             <div class="lead-form-card">
                 <h3 class="lead-form-heading">Get Your Free Strategy Call</h3>
