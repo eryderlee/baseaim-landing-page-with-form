@@ -508,18 +508,21 @@
         var btn = document.getElementById('schedule-btn');
         var firmInput = document.getElementById('firm-name');
         var emailInput = document.getElementById('email');
+        var phoneInput = document.getElementById('phone');
         var challengeInput = document.getElementById('challenge');
 
         function checkFormValid() {
             var valid = firmInput.value.trim() !== '' &&
                         emailInput.value.trim() !== '' &&
                         emailInput.validity.valid &&
+                        phoneInput.value.trim() !== '' &&
                         challengeInput.value !== '';
             btn.disabled = !valid;
         }
 
         firmInput.addEventListener('input', checkFormValid);
         emailInput.addEventListener('input', checkFormValid);
+        phoneInput.addEventListener('input', checkFormValid);
 
         // --- Custom dropdown ---
         var selectEl = document.getElementById('custom-select');
@@ -583,12 +586,14 @@
             if (formSubmitted) return;
             var fn = firmInput.value.trim();
             var em = emailInput.value.trim();
+            var ph = phoneInput.value.trim();
             var rev = challengeInput.value;
-            if (!fn && !em && !rev) return;
+            if (!fn && !em && !ph && !rev) return;
 
             fetch(PARTIAL_URL + '?sessionId=' + encodeURIComponent(sessionId) +
                 '&firmName=' + encodeURIComponent(fn) +
                 '&email=' + encodeURIComponent(em) +
+                '&phone=' + encodeURIComponent(ph) +
                 '&revenue=' + encodeURIComponent(rev), {
                 mode: 'no-cors'
             }).catch(function() {});
@@ -601,6 +606,7 @@
 
         firmInput.addEventListener('blur', debouncedPartial);
         emailInput.addEventListener('blur', debouncedPartial);
+        phoneInput.addEventListener('blur', debouncedPartial);
 
         form.addEventListener('submit', function(e) {
             formSubmitted = true;
@@ -609,6 +615,7 @@
 
             var firmName = firmInput.value.trim();
             var email = emailInput.value.trim();
+            var phone = phoneInput.value.trim();
             var revenue = challengeInput.value;
 
             // Send lead data to n8n webhook
@@ -618,6 +625,7 @@
                 body: JSON.stringify({
                     firmName: firmName,
                     email: email,
+                    phone: phone,
                     revenue: revenue
                 })
             }).catch(function() {});
@@ -627,6 +635,7 @@
             var calParams = [];
             if (firmName) calParams.push('name=' + encodeURIComponent(firmName));
             if (email) calParams.push('email=' + encodeURIComponent(email));
+            if (phone) calParams.push('phone=' + encodeURIComponent(phone));
             var calUrl = calBase + (calParams.length ? '?' + calParams.join('&') : '');
 
             var container = document.querySelector('.modal-container');
@@ -687,6 +696,10 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="you@yourfirm.com.au" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX" required autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label>Annual Firm Revenue</label>

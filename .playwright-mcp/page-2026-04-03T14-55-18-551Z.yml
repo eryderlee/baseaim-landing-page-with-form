@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - img "Baseaim" [ref=e14] [cursor=pointer]
+      - heading "Accountants Listen up THREE new clients every single month Or you Don't Pay" [level=1] [ref=e15]:
+        - text: Accountants
+        - generic [ref=e16]: Listen up
+        - strong [ref=e17]: THREE
+        - text: new clients
+        - text: every single month
+        - generic [ref=e19]: Or you Don't Pay
+      - paragraph
+    - button "Book My Free Strategy Call" [ref=e21] [cursor=pointer]
+    - img [ref=e23] [cursor=pointer]
+  - generic [ref=e26]:
+    - heading "What We Found Out" [level=2] [ref=e27]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: Pain Point
+        - paragraph [ref=e31]: "It properly feels like:"
+        - list [ref=e32]:
+          - listitem [ref=e33]:
+            - strong [ref=e34]: "Frustrated:"
+            - text: because you’ve tried to grow, yet revenue stays in the same range.
+          - listitem [ref=e35]:
+            - strong [ref=e36]: "Burnt out:"
+            - text: because you’re working hard but progress feels slow
+          - listitem [ref=e37]:
+            - strong [ref=e38]: "Uncertain:"
+            - text: because there’s so much conflicting marketing advice it’s hard to know what works
+          - listitem [ref=e39]:
+            - strong [ref=e40]: "Behind:"
+            - text: because other firms seem to be growing faster than you expected
+          - listitem [ref=e41]:
+            - strong [ref=e42]: "Skeptical:"
+            - text: because you’ve spent thousands on marketing that didn’t work
+      - generic [ref=e43]:
+        - paragraph [ref=e44]: Diagnosis
+        - heading "Here’s why growth feels stagnant" [level=3] [ref=e45]
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - generic [ref=e48]: 1. Waiting for Referrals
+            - generic [ref=e49]: → Low volume and unpredictable
+          - listitem [ref=e50]:
+            - generic [ref=e51]: 2. SEO and Website Upgrades
+            - generic [ref=e52]: → Long-term visibility… but slow and unpredictable
+          - listitem [ref=e53]:
+            - generic [ref=e54]: 3. Generic Marketing Agencies
+            - generic [ref=e55]: → Hiring agencies without any experience in the accounting industry
+          - listitem [ref=e56]:
+            - generic [ref=e57]: 4. Brand Awareness Campaigns
+            - generic [ref=e58]: → Numbers on a screen… but no predictable consultations
+          - listitem [ref=e59]:
+            - generic [ref=e60]: 5. Relying on Tax Season
+            - generic [ref=e61]: → Growth spikes briefly, then slows the rest of the year
+        - paragraph [ref=e62]: Passive growth sounds safe… but it leaves your firm with no control over when clients come in.
+      - generic [ref=e63]:
+        - paragraph [ref=e64]: The Shift
+        - heading "What This System Does for Your Firm" [level=3] [ref=e65]
+        - list [ref=e66]:
+          - listitem [ref=e67]:
+            - generic [ref=e68]: ✓ Predictable consultations with business owners
+            - generic [ref=e69]: → Qualified prospects booking directly into your calendar
+          - listitem [ref=e70]:
+            - generic [ref=e71]: ✓ Done-for-you client acquisition system
+            - generic [ref=e72]: → Ads, targeting, and booking infrastructure handled for you
+          - listitem [ref=e73]:
+            - generic [ref=e74]: ✓ Built specifically for accounting firms
+            - generic [ref=e75]: → Designed for firms with 3–12 staff
+          - listitem [ref=e76]:
+            - generic [ref=e77]: ✓ Performance-backed guarantee
+            - generic [ref=e78]: → If it doesn’t work, we carry the risk
+        - generic [ref=e81]:
+          - strong [ref=e82]: 3 spots
+          - text: left this month
+        - button "Book My Free Strategy Call" [ref=e84] [cursor=pointer]
+  - generic [ref=e86]:
+    - heading "How it works" [level=2] [ref=e87]
+    - generic [ref=e88]:
+      - generic [ref=e89]:
+        - generic [ref=e90]: "1"
+        - heading "Jump on Your Strategy Call" [level=3] [ref=e91]
+        - paragraph [ref=e92]: We diagnose what’s limiting growth today and align on the targets that matter.
+      - generic [ref=e93]:
+        - generic [ref=e94]: "2"
+        - heading "Implement Our Proven System" [level=3] [ref=e95]
+        - paragraph [ref=e96]: We craft the positioning, campaigns, funnel, and follow-up engine for your firm.
+      - generic [ref=e97]:
+        - generic [ref=e98]: "3"
+        - heading "Launch & Consults" [level=3] [ref=e99]
+        - paragraph [ref=e100]: We go live, pre-qualify responses, and deliver booked consults straight to your calendar.
+    - button "Book My Free Strategy Call" [ref=e102] [cursor=pointer]
+  - generic [ref=e104]:
+    - heading "What You’re Gonna Get" [level=2] [ref=e105]
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - img "Personalized breakdown" [ref=e109]
+        - paragraph [ref=e110]: Personalized Breakdown & audit of your current situation To Pinpoint Your Main Bottleneck
+      - generic [ref=e111]:
+        - img "Dashboard walkthrough" [ref=e113]
+        - paragraph [ref=e114]: Complete walkthrough of our marketing communication system
+      - generic [ref=e115]:
+        - img "Personalized roadmap" [ref=e117]
+        - paragraph [ref=e118]: Personalized roadmap which shows you goals being achieved step by step
+    - img [ref=e120]
+    - generic [ref=e123]:
+      - heading "Guaranteed results." [level=3] [ref=e124]
+      - paragraph [ref=e125]: If we don’t deliver the agreed number of qualified booked calls, You Don’t Pay.
+    - button "Book My Free Strategy Call Refund Guaranteed" [ref=e127] [cursor=pointer]:
+      - generic [ref=e128]: Book My Free Strategy Call
+      - generic [ref=e129]: Refund Guaranteed
+  - generic [ref=e131]:
+    - generic [ref=e132]:
+      - heading "Testimonials from accounting firms" [level=3] [ref=e133]
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - img "Michael R headshot" [ref=e138]
+            - paragraph [ref=e139]: – Michael R, Partner
+          - paragraph [ref=e140]:
+            - strong [ref=e141]: Predictable Consultations
+          - generic [ref=e143]: "4.7"
+          - paragraph [ref=e144]:
+            - text: “For years our new clients mostly came from referrals. Some months we’d get a few enquiries, other months nothing. After working with the team, we started getting
+            - strong [ref=e145]: consistent consultations
+            - text: booked each month and it completely changed how we think about growth.”
+          - paragraph [ref=e146]: 20th March 2025
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - img "Sarah M headshot" [ref=e150]
+            - paragraph [ref=e151]: – Sarah M, Firm Manager
+          - paragraph [ref=e152]:
+            - strong [ref=e153]: They Really Delivered
+          - generic [ref=e155]: "4.9"
+          - paragraph [ref=e156]:
+            - text: “They booked 39 consultations for us over about 6 months and we ended up onboarding
+            - strong [ref=e157]: 21 new clients
+            - text: . What impressed me most was how transparent they were with marketing strategies.”
+          - paragraph [ref=e158]: 19th September 2025
+        - generic [ref=e159]:
+          - generic [ref=e160]:
+            - img "Tommy S headshot" [ref=e162]
+            - paragraph [ref=e163]: – Tommy S, Senior Accountant
+          - paragraph [ref=e164]:
+            - strong [ref=e165]: Reliable Pipeline System
+          - generic [ref=e167]: "4.3"
+          - paragraph [ref=e168]:
+            - text: “Before this we had no real system for bringing in new business. Everything depended on referrals or the occasional enquiry through the website. Now we have a
+            - strong [ref=e169]: steady pipeline
+            - text: of consultations and we can actually plan hiring and growth properly.”
+          - paragraph [ref=e170]: 12th January 2026
+    - button "Book My Free Strategy Call" [ref=e172] [cursor=pointer]
+  - generic [ref=e174]:
+    - heading "If You’re Thinking..." [level=2] [ref=e175]
+    - list [ref=e176]:
+      - listitem [ref=e177]: ✓ “This is exactly what’s been frustrating me.”
+      - listitem [ref=e178]: ✓ “We don’t need more leads, we need better clients.”
+      - listitem [ref=e179]: ✓ “I just want predictable growth.”
+    - paragraph [ref=e180]: Then it’s probably time to schedule a strategy call and look at this properly.
+  - generic [ref=e182]:
+    - heading "Book a Strategy Call" [level=2] [ref=e183]
+    - paragraph [ref=e184]: "On this call, we’ll:"
+    - list [ref=e185]:
+      - listitem [ref=e186]: ✓ Identify what’s actually limiting your growth
+      - listitem [ref=e187]: ✓ Map the acquisition system your firm needs
+      - listitem [ref=e188]: ✓ Break down how 3+ new clients per month becomes predictable
+    - paragraph [ref=e189]: No pressure. No fluff. Just clarity.
+    - button "Book My Free Strategy Call" [ref=e191] [cursor=pointer]
+  - generic [ref=e193]:
+    - heading "Frequently Asked Questions" [level=2] [ref=e194]
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - button "What counts as a qualified lead? +" [ref=e197] [cursor=pointer]
+        - paragraph [ref=e198]: A local business owner who fits your service criteria, has expressed intent, and books a consultation.
+      - generic [ref=e199]:
+        - button "Do you only work with Accounting Firms? +" [ref=e200] [cursor=pointer]
+        - paragraph [ref=e201]: Yes. Everything we build is tailored specifically for Accounting Firms serving local businesses.
+      - generic [ref=e202]:
+        - button "How much ad spend is required? +" [ref=e203] [cursor=pointer]
+        - paragraph [ref=e204]: Ad spend varies by location, but we'll give clear guidance during the call.
+      - generic [ref=e205]:
+        - button "What if we're in a smaller market? +" [ref=e206] [cursor=pointer]
+        - paragraph [ref=e207]: We'll assess this upfront and tell you honestly if it's viable.
+      - generic [ref=e208]:
+        - button "Do you handle the sales calls? +" [ref=e209] [cursor=pointer]
+        - paragraph [ref=e210]: No, leads book directly into your calendar, and your team runs the consultation.
+      - generic [ref=e211]:
+        - button "How fast can we launch? +" [ref=e212] [cursor=pointer]
+        - paragraph [ref=e213]: Typically within 7–14 days after onboarding.
+    - button "Book My Free Strategy Call" [ref=e215] [cursor=pointer]
+  - contentinfo [ref=e216]:
+    - generic [ref=e217]:
+      - img "Baseaim" [ref=e218]
+      - generic [ref=e219]:
+        - paragraph [ref=e220]: Predictable client acquisition for Australian Accounting Firms
+        - paragraph [ref=e221]:
+          - text: Visit our website at
+          - link "baseaim.co" [ref=e222] [cursor=pointer]:
+            - /url: https://baseaim.co
+        - paragraph [ref=e223]: © 2026 Baseaim. All rights reserved.
